@@ -1,21 +1,36 @@
-### Create a new user
+### Sign Up User
 POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
   "email":"faizanullah1999@gmail.com",
-  "password":"12344"
+  "password":"faizi123"
 }
+
+### Login as an existing User
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email":"faizanullah1999@gmail.com",
+  "password":"faizi123"
+}
+
+### Get currently signed in user
+GET http://localhost:3000/auth/whoami
+
+### Sign out
+POST http://localhost:3000/auth/signout
 
 ### Find a particular user with a given id
 GET http://localhost:3000/auth/2
 
 
 ### Find all usrs with a given email
-Get http://localhost:3000/auth?email=faizanullah1999@gmail.com
+Get http://localhost:3000/auth?email=faizanullah1999@hotmail.com
 
 ### Delete a user with a given id
-DELETE http://localhost:3000/auth/38798
+DELETE http://localhost:3000/auth/5
 
 ### Update a user
 PATCH http://localhost:3000/auth/2098432
